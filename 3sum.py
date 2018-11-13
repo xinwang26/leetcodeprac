@@ -89,9 +89,9 @@ class Solution(object):
             for n in neg:
                 tmp = - p - n
                 if tmp in counts:
-                    if tmp < n or tmp > p:
+                    if tmp < n or tmp > p: #this restriction avoid any duplicated triplet
                         ret.append([n, p, tmp])
-                    elif (tmp == p or tmp == n) and counts[tmp] > 1:
+                    elif (tmp == p or tmp == n) and counts[tmp] > 1: #this won't generate duplicate since pos and neg do not have any duplicate
                         ret.append([n, p, tmp])
 
         return ret
