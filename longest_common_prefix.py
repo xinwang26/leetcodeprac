@@ -59,3 +59,31 @@ class Solution:
                 
         
         return result
+
+#11/12 write it again, need to review again:
+class Solution:
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        if len(strs)<1:
+            return ''
+        if len(strs) == 1:
+            return strs[0]
+        first = strs[0]
+        result = ''
+        for i in range(len(first)):
+            iiscommon = True
+            try:
+                for w in strs[1:]:
+                    if w[i] != first[i]:
+                        iiscommon = False
+                        break
+                if iiscommon:
+                    result = result + first[i]
+                else:
+                    return result
+            except:
+                return result
+        return result
