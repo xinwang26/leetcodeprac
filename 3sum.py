@@ -95,3 +95,40 @@ class Solution(object):
                         ret.append([n, p, tmp])
 
         return ret
+
+#tried to remember but twisted result, 500ms slower than last
+class Solution:
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        if len(nums)<3:
+            return []
+        result, pos, neg, counts = [],[],[],{}
+        #seprate the positive and negative
+        for n in nums:
+            if n in counts.keys():
+                counts[n] +=1
+            else:
+                counts[n] = 1
+            if n>0 and n not in pos:
+                pos.append(n)
+            elif n<0 and n not in neg:
+                neg.append(n)
+        try:
+            if counts[0] >2:
+                result.append([0,0,0])
+        except:
+            0
+        #sort the numbers then start calc
+        pos.sort();neg.sort()
+        for p in pos:
+            for n in neg:
+                s = -(p+n)
+                if s < p and s > n and s in counts.keys():
+                    result.append([n,s,p])
+                elif s == n or s==p:
+                    if counts[s] >1:
+                        result.append([n,s,p])
+        return result
