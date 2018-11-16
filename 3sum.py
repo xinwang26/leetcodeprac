@@ -157,3 +157,75 @@ class Solution:
                     if counts[s] >1:
                         result.append([n,s,p])
         return result
+
+#7/16 morning solution
+class Solution:
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        #solution1
+        if len(nums)<3:
+            return []
+        nums.sort()
+        result = []
+        for l in range(len(nums)-2):
+            if l >0 and nums[l-1] == nums[l]:
+                continue
+            m, r = l+1, len(nums) - 1
+            if nums[l] + nums[m] + nums[m+1] > 0:
+                break
+            if nums[l] + nums[r] + nums[r-1] < 0:
+                continue
+            while m<r:
+                s = nums[l] + nums[m] + nums[r]
+                if s <0:
+                    m += 1
+                elif s >0:
+                    r -= 1
+                else:   
+                    result.append([nums[l],nums[m],nums[r]])
+                    while m <r and nums[m] == nums[m+1]:
+                        m+=1
+                    while m <r and nums[r] == nums[r-1]:
+                        r-=1
+                    m +=1
+                    r -=1
+        return result
+
+
+#11/16 review:
+class Solution:
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        #solution1
+        pos, neg, result, counts = [],[],[],{}
+        for n in nums:
+            if n in counts.keys():
+                counts[n]+=1
+            else:
+                counts[n] =1
+                if n >=0:
+                    pos.append(n)
+                elif n<0:
+                    neg.append(n)
+                    
+        if 0 in counts.keys() and counts[0] >2:
+            result.append([0,0,0])
+        
+        pos.sort();neg.sort()
+        for p in pos:
+            for n in neg:
+                remain = -(p+n)
+                if remain in counts.keys():
+                    if remain > p or remain < n:
+                        result.append([n,p,remain])
+                    elif (remain == p or remain ==n) and counts[remain] >1:
+                        result.append([n,p,remain])
+#this one slower than earlier one because used "keys()", when check in dictionary, could use the dictionary itself                        
+        return result
+
