@@ -52,3 +52,29 @@ class Solution:
                             return result
         appendnextpermute(nums)
         return result
+
+#have dup permute, speed varies a lot from 48ms - 80ms
+class Solution:
+    def permute(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        if len(nums)<=1:
+            return [nums]
+        results = []
+        global results
+        # global results
+        def recur_permute(nums,begin):
+            global results
+            if begin == len(nums):
+                results.append(nums)
+                return
+            else:
+                recur_permute(nums[:],begin+1)
+                for i in range(begin+1,len(nums)):
+                    nums[begin],nums[i] = nums[i],nums[begin]
+                    recur_permute(nums[:],begin+1)
+                    nums[begin],nums[i] = nums[i],nums[begin]
+        recur_permute(nums,0)
+        return results
