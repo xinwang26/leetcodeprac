@@ -1,4 +1,4 @@
-#dictionary method my own 
+#dictionary method my own but slow as 56ms and slower than 48.24% python3 solution
 class Solution:
     def permute(self, nums):
         """
@@ -24,6 +24,27 @@ class Solution:
                             result.append(appendnextpermute(currpermut[:]))
                             return currpermut
         appendnextpermute(nums)
-        result =  list(filter(None,result) ) + [nums] 
-        # result = result.remove(null) + [nums]
+<<<<<<< HEAD
         return result
+
+#have dup permute, speed varies a lot from 48ms - 80ms
+class Solution:
+    def permute(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        if len(nums)<=1:
+            return [nums]
+        results = []
+        global results
+        # global results
+        def recur_permute(nums,begin):
+            global results
+            if begin == len(nums):
+                results.append(nums)
+                return
+            else:
+                recur_permute(nums[:],begin+1)
+                for i in range(begin+1,len(nums)):
+                    nums[begin],nums[i] = nums[i],nums[begi

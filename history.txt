@@ -1,0 +1,455 @@
+    1  bash NVIDIA-Linux-x86_64-390.87.run
+    2  cd /
+    3  bash ~/Downloads/NVIDIA-Linux-x86_64-390.87.run
+    4  exit
+    5  bash ~/Downloads/NVIDIA-Linux-x86_64-390.87.run
+    6  sudo bash NVIDIA-Linux-x86_64-390.87.run
+    7  sudo bash ~/Downloads/NVIDIA-Linux-x86_64-390.87.run
+    8  nvidia-smi
+    9  sudo apt install nvidia-340      
+   10  nvidia-smi
+   11  sudo apt install nvidia-340      
+   12  sudo apt-get purge nvidia* 
+   13  Updated - September 18, 2018
+   14  The quick way:
+   15  Before adding this PPA, please read the PPA's Description on their page which mentions important information about using it, which version is right for your Nvidia card and more. This is for desktop users who want the latest version of the driver or the last supported one for their card.
+   16  Using 18.04+ To install run the following command:
+   17  sudo add-apt-repository ppa:graphics-drivers/ppa
+   18  sudo add-apt-repository ppa:graphics-drivers/ppa
+   19  sudo apt install nvidia-driver-396
+   20  nvidia-smi
+   21  echo $PATH
+   22  nvidia-msi
+   23  sudo apt-get purge nvidia*
+   24  bash ~/Downloads/NVIDIA-Linux-x86_64-390.87.run
+   25  sudo bash ~/Downloads/NVIDIA-Linux-x86_64-390.87.run
+   26  sudo ubuntu-drivers autoinstall
+   27  nvidia-msi
+   28  sudo bash ~/Downloads/NVIDIA-Linux-x86_64-390.87.run
+   29  sudo update-initramfs -u
+   30  sudo bash ~/Downloads/NVIDIA-Linux-x86_64-390.87.run
+   31  sudoedit /etc/modprobe.d/nvidia-graphics-drivers.conf
+   32  sudo bash ~/Downloads/NVIDIA-Linux-x86_64-390.87.run
+   33  reboot
+   34  sudo bash ~/Downloads/NVIDIA-Linux-x86_64-390.87.run
+   35  sudo apt-get remove --purge nvidia-*
+   36  nvidia-msi
+   37  nvidia
+   38  nvidia-msi
+   39  sudo bash ~/Downloads/NVIDIA-Linux-x86_64-390.87.run
+   40  reboot
+   41  sudo bash ~/Downloads/NVIDIA-Linux-x86_64-390.87.run
+   42  nvidia-msi
+   43  sudo apt-get remove --purge nvidia*
+   44  sudo ubuntu-drivers autoinstall
+   45  nvidia-msi
+   46  reboot
+   47  nvidia-msi
+   48  sudo apt-get update
+   49  sudo apt-get install     apt-transport-https     ca-certificates     curl     software-properties-common
+   50  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   51  sudo apt-key fingerprint 0EBFCD88
+   52  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   53     $(lsb_release -cs) \
+   54     stable"
+   55  sudo apt-get update
+   56  sudo apt-get install docker-ce
+   57  docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f
+   58  sudo apt-get purge -y nvidia-docker
+   59  sudp docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f
+   60  sudo docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f
+   61  sudo apt-get purge -y nvidia-docker
+   62  curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey |   sudo apt-key add -
+   63  distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+   64  curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list |   sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+   65  sudo apt-get update
+   66  sudo apt-get install -y nvidia-docker2
+   67  sudo pkill -SIGHUP dockerd
+   68  docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
+   69  sudo docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
+   70  nvidia-smi
+   71  git clone https://github.com/saiprashanths/dl-docker.git
+   72  cd dl-docker
+   73  docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
+   74  sudp docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
+   75  sudo docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
+   76  git clone https://github.com/saiprashanths/dl-docker.git
+   77  ls
+   78  cd Documents
+   79  ls
+   80  cd DL
+   81  git clone https://github.com/saiprashanths/dl-docker.git
+   82  cd dl-docker
+   83  sudo docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
+   84  cd DL
+   85  cd Documents
+   86  cd DL
+   87  cd dl-docker
+   88  git clone https://github.com/saiprashanths/dl-docker.git
+   89  sudo docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
+   90  cd DL
+   91  cd Documents
+   92  cd dl-docker
+   93  cd DL
+   94  cd dl-docker
+   95  sudo docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
+   96  nvidia-docker run -it -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:gpu bash
+   97  sudo nvidia-docker run -it -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:gpu bash
+   98  sudo docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
+   99  make[2]: *** [lib/libcaffe.so.1.0.0] Error 1
+  100  sudo docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
+  101  nvidia-docker run -it --name gpudl -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:gpu bash
+  102  sudo nvidia-docker run -it --name gpudl -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:gpu bash
+  103  docker ps
+  104  sudo docker ps
+  105  sudo docker ls
+  106  docker ls
+  107  docker image ls
+  108  sudo docker image ls
+  109  sudo docker rmi 5407890475b4
+  110  docker system prune -a
+  111  sudo docker image ls
+  112  sudo docker ps
+  113  sudo docker rmi 5407890475b4
+  114  docker images -a
+  115  sudo docker images -a
+  116  docker system prune -a
+  117  sudo docker system prune -a
+  118  sudo docker images -a
+  119  sudo docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
+  120  sudo docker images -a
+  121  sudo nvidia-docker run -it --name gpudl -p 8888:8888 -p 6006:6006 -v /sharedfolder:/root/sharedfolder floydhub/dl-docker:gpu bash
+  122  sudo docker system prune -a
+  123  sudo docker images -a
+  124  sudo docker system prune -a
+  125  exit
+  126  python
+  127  python3
+  128  0.95/1.7
+  129  python
+  130  python3
+  131  bash Anaconda-latest-Linux-x86_64.sh
+  132  bash Anaconda3-5.3.0-Linux-x86_64.sh
+  133  cd /etc/fonts/conf.avail/
+  134  ls
+  135  nano 64-language-selector-prefer.conf
+  136  sudo nano 64-language-selector-prefer.conf
+  137  exit
+  138  jupyter-notebook
+  139  top
+  140  cd Downloads
+  141  LS
+  142  ls
+  143  bash Anaconda3-5.3.0-Linux-x86_64.sh
+  144  bash Anaconda3-5.3.0-Linux-x86_64.sh -u
+  145  jupyter-notebook
+  146  anaconda-navigator
+  147  anaconda
+  148  jupyter-notebook
+  149  exit
+  150  jupyter-notebook
+  151  sudo fdist -lu
+  152  fdisk -lu
+  153  sudo fdist -lu
+  154  sudo fdisk -lu
+  155  sudo fdisk /dev/nvme0n1
+  156  sudo fdisk -lu
+  157  sudo mkfs -t ext /dev/nvme0n1
+  158  sudo mkfs -t ext4 /dev/nvme0n1
+  159  sudo df -l
+  160  cd /etc/fstab
+  161  exit
+  162  sudo blkid
+  163  sudo nano /etc/fstab
+  164  exit
+  165  sudo nano /etc/fstab
+  166  restart
+  167  sudo restart
+  168  sudo fdisk -lu
+  169  sudo fdisk /dev/nvme0n1
+  170  sudo mkfs -t ext4 /dev/nvme0n1
+  171  sudo blkid
+  172  sudo unmount /dev/nvme0n1
+  173  sudo umount /dev/nvme0n1
+  174  sudo mkfs -t ext4 /dev/nvme0n1
+  175  sudo blkid
+  176  cd /home
+  177  ls
+  178  cd XinFiles
+  179  ks
+  180  ls
+  181  cd ...
+  182  cd ..
+  183  rm XinFiles
+  184  rm -r XinFiles
+  185  sudo rm -r XinFiles
+  186  ls
+  187  mkdir Xin
+  188  sudp mkdir Xin
+  189  sudo mkdir Xin
+  190  ls
+  191  sudo chomd Xin 777
+  192  sudo chmod Xin 777
+  193  sudo chmod -R Xin 777
+  194  sudo chmod -R 777 Xin
+  195  ls
+  196  ls -a
+  197  ls -l
+  198  nano /etc/fstab
+  199  sudp nano /etc/fstab
+  200  sudo nano /etc/fstab
+  201  exit
+  202  LS
+  203  cd ..
+  204  ls
+  205  sudo rm -R Xin
+  206  ls
+  207  cd xinwang
+  208  ls
+  209  sudo blkid
+  210  mount /dev/nvme0n1 /data
+  211  sudp mount /dev/nvme0n1 /data
+  212  sudo mount /dev/nvme0n1 /data
+  213  mount /dev/nvme0n1 /data
+  214  sudo umount /dev/nvme0n1
+  215  mount /dev/nvme0n1 /data
+  216  cd ..
+  217  mount /dev/nvme0n1 /data
+  218  sudo mount /dev/nvme0n1 /data
+  219  e2label /dev/nvme0n1 data
+  220  sudo e2label /dev/nvme0n1 data
+  221  sudo e2label /dev/nvme0n1 data1
+  222  sudo e2label /dev/nvme0n1 newHD
+  223  sudo blkid
+  224  sudo nano /etc/fstab
+  225  reboot
+  226  ls
+  227  mkdir newfolder
+  228  sudp mkdir newfolder
+  229  sudo mkdir newfolder
+  230  cd ..
+  231  ls
+  232  cd newpart
+  233  ls
+  234  cd ..
+  235  sudo chmod 755 newpart
+  236  sudo blkid
+  237  sudo umount /dev/nvme0n1
+  238  sudo chown -R xinwang:xinwang /dev/nvme0n1
+  239  sudo chmod -R 755 /dev/nvme0n1
+  240  sudo chown user:user
+  241  sudo chown xinwang:xinwang
+  242  sudo chown xinwang:xinwang /dev/nvme0n1
+  243  /dev/nvme0n1
+  244  sudo /dev/nvme0n1
+  245  sudo ls /dev/nvme0n1
+  246  cd /dev/nvme0n1
+  247  sudo chown xinwang:xinwang -R ~/Documents/newpart
+  248  sudo chown xinwang:xinwang -R /dev/nvme0n1
+  249  python
+  250  git
+  251  githuyb
+  252  github
+  253  sudo apt-get install git
+  254  git config --global user.name "xinwang26"
+  255  git config --global user.email "xinwang26@yahoo.com"
+  256  ls
+  257  cd Documents
+  258  ls
+  259  cd coding
+  260  ls
+  261  git init python
+  262  cd python
+  263  getit README
+  264  gedit README
+  265  git push origin master
+  266  git remote add origin https://github.com/xinwang26/leetcodeprac.git
+  267  git push origin master
+  268  git remote add origin https://github.com/xinwang26/leetcodeprac
+  269  git remote update origin https://github.com/xinwang26/leetcodeprac
+  270  git remote add origin https://github.com/xinwang26/python
+  271  git remote rm origin
+  272  git remote add origin https://github.com/xinwang26/python
+  273  git push origin master
+  274  git add .
+  275  git push origin master
+  276  git commit -m "initial commit"
+  277  git push origin master
+  278  git remote rm origin
+  279  git remote add origin https://github.com/xinwang26/leetcodeprac
+  280  git push origin master
+  281  git pull origin
+  282  ls
+  283  git pull origin master
+  284  ls
+  285  git pull origin master--allow-unrelated-histories
+  286  git pull origin master --allow-unrelated-histories
+  287  git push origin master
+  288  rm addtwonumbers11082018nonn.py
+  289  git push origin master
+  290  git commit
+  291  git push origin master
+  292  git commit
+  293  ls
+  294  git pull origin master
+  295  ls
+  296  rm two_sum
+  297  ls
+  298  git commit
+  299  git push origin master
+  300  ls
+  301  git rm twosum
+  302  git commit
+  303  git commit -a
+  304  ls
+  305  git commit -a
+  306  ls
+  307  git getch upstream
+  308  git fetch upstream
+  309  git fetch master
+  310  git checkout master
+  311  git pull origin master
+  312  ls
+  313  git remote rm origin
+  314  git remote add origin https://github.com/xinwang26/leetcodeprac
+  315  git pull origin master
+  316  ls
+  317  git commit -a
+  318  git push origin master
+  319  ls
+  320  git pull origin master
+  321  ls
+  322  less testing.py
+  323  git rm testing.py
+  324  git commit -a
+  325  ls
+  326  git push origin master
+  327  python
+  328  git commit
+  329  cd Documents/coding/python
+  330  git commit
+  331  git push origin master
+  332  git commit
+  333  git commit *.py
+  334  git add *.py
+  335  git commit 
+  336  git push origin master
+  337  python
+  338  export coding="~/Documents/coding/python"
+  339  cd $coding
+  340  ls
+  341  echo $path
+  342  cd ~/Documents/coding/python
+  343  echo ~
+  344  export coding="/home/xinwang/Documents/coding/python"
+  345  echo $path
+  346  cd $coding
+  347  cd ~
+  348  cd $coding
+  349  ls
+  350  git add *.py
+  351  git commit
+  352  cd $coding
+  353  ls
+  354  export coding = '/home/xinwang/Documents/coding/python'
+  355  export coding="/home/xinwang/Documents/coding/python"
+  356  nano ~/.bashrc
+  357  exit
+  358  cd $coding
+  359  git commit
+  360  git push origin master
+  361  python
+  362  git commit
+  363  git add *.py
+  364  git commit
+  365  git push origin master
+  366  history > history.txt
+  367  git config --global credential.helper 'cache --timeout 28800'
+  368  git push origin master
+  369  nano ~/.bashrc
+  370  exit
+  371  git push origin master
+  372  cd $coding
+  373  git push origin master
+  374  python
+  375  git add *.py
+  376  git commit
+  377  git push origin master
+  378  python
+  379  git add *.py
+  380  git commit
+  381  git push origin master
+  382  exit
+  383  cd $coding
+  384  git add 
+  385  git add *.py
+  386  git pull origin online
+  387  git fetch origin 
+  388  ls
+  389  more 3sum.py
+  390  nano 3sum.py
+  391  git merge origin master
+  392  git pull origin master
+  393  get add *.py
+  394  git add *.py
+  395  git commit
+  396  git push origin master
+  397  python
+  398  git add *.py
+  399  git commit
+  400  git push origin master
+  401  exit
+  402  python
+  403  cd $coding
+  404  git pull origin master
+  405  git add *.py
+  406  git commit
+  407  git push origin master
+  408  exit
+  409  cd $coding
+  410  git commit
+  411  git pull origin master
+  412  git push origin master
+  413  git add *.py
+  414  git commit
+  415  git push origin master
+  416  anaconda navigator
+  417  anaconda -navigator
+  418  anaconda
+  419  jupyter notebook
+  420  anaconda
+  421  anaconda navigator
+  422  anaconda-navigator
+  423  python
+  424  cd $coding
+  425  python python_recursive_permutation.py
+  426  cd $coding
+  427  python python_recursive_permutation.py
+  428  python iter_permutation_xin.py
+  429  python python_recursive_permutation.py
+  430  top
+  431  cd $coding
+  432  python python_recursive_permutation.py
+  433  python python_recursive_permutation2.py
+  434  python python_recursive_permutation.py
+  435  cd $coding
+  436  python python_recursive_permutation.py
+  437  python python_recursive_permutation2.py
+  438  cd $coding
+  439  python python_recursive_permutation2.py
+  440  python python_recursive_permutation.py
+  441  python python_recursive_permutation2.py
+  442  top
+  443  cd $coding
+  444  python python_recursive_permutation.py
+  445  python
+  446  pip install json
+  447  pip install --upgrade pip
+  448  pip install json
+  449  python
+  450  dd if=/dev/zero of=/dev/null bs=1M count=1024
+  451  dd if=/dev/zero of=file bs=1M count=1024
+  452  cd $coding
+  453  git pull orgin master
+  454  git pull orginal master
+  455  history > history.txt
